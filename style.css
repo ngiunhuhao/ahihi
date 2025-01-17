@@ -1,0 +1,213 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffb6c1;
+  font-family: 'Arial', sans-serif;
+}
+
+.button {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: #ff1493;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+  transform: rotate(-45deg);
+  transition: transform 0.3s;
+}
+
+.button::before,
+.button::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #ff1493;
+  border-radius: 50%;
+  top: -25px;
+  left: 0;
+}
+
+.button::after {
+  left: 25px;
+  top: 0;
+}
+
+.button:hover {
+  transform: rotate(-45deg) scale(1.5);
+}
+
+.card {
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: absolute;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+  border: none;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 25px;
+  z-index: -1;
+}
+
+.letter {
+  padding: 40px;
+  background-color: #fff;
+  border: 2px solid #8b5e3c;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to bottom right, #fdf8e3, #fcebb0);
+  text-align: center;
+  margin: 20px auto;
+  word-wrap: break-word;
+}
+
+.letter p {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: moveText 2s ease-out forwards;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.letter .line:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.letter .line:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.letter .line:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.letter .line:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+.letter .line:nth-child(5) {
+  animation-delay: 2s;
+}
+
+.letter .line:nth-child(6) {
+  animation-delay: 2.5s;
+}
+
+.letter .line:nth-child(7) {
+  animation-delay: 3s;
+}
+
+.line {
+  margin: 10px 0;
+}
+
+.romantic-1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+}
+
+.romantic-2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  color: #c71585;
+}
+
+.romantic-3 {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 22px;
+  color: #8b0000;
+}
+
+.heart {
+  font-size: 40px;
+  color: #ff1493;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img[alt="Labubu"] {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  bottom: 215px;
+  left: -15px;
+  transform: rotate(-25deg);
+}
+
+img[alt="Rose"] {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  bottom: 195px;
+  right: -5px;
+}
+
+.signature {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 30px;
+}
+
+.romantic-signature {
+  font-family: 'Allura', cursive;
+  color: #2a2929;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transform: rotate(-5deg);
+  transition: transform 0.3s ease;
+  font-size: 20px;
+}
+
+.romantic-signature:hover {
+  transform: rotate(5deg);
+}
+
+.position-1 {
+  position: absolute;
+  top: 20px;
+  left: 37%;
+  transform: translateX(-50%);
+}
+
+.position-2 {
+  position: absolute;
+  bottom: 27px;
+  left: 33%;
+  transform: translateX(-50%);
+}
